@@ -30,4 +30,10 @@ set(CMAKE_CXX_FLAGS_DEBUG    "${CXX_FLAGS} ${FLAGS_DEBUG} ${WARN_FLAGS}")
 
 set(INSTALL_NAME_DIR ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
+find_package(Threads REQUIRED)
+find_package(Boost 1.72 REQUIRED COMPONENTS system)
+include_directories(${Boost_INCLUDE_DIR})
+
+set(COMMON_LIBS ${Boost_LIBRARIES} Threads::Threads)
+
 add_subdirectory(src)

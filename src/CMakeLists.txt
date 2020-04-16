@@ -1,4 +1,4 @@
-set(subprojects dummy dummy2)
+set(subprojects dummy sync_timer)
 
 foreach(subpr IN ITEMS ${subprojects})
     if(${WANTED} STREQUAL "ALL" OR  ${subpr} STREQUAL ${WANTED})
