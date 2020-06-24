@@ -1,0 +1,16 @@
+set(SUBPROJECT_NAME tcpDayTimeServer)
+message(STATUS "BUILD TARTET: ${SUBPROJECT_NAME}")
+
+set(SRCS main.cpp)
+
+message(STATUS "> BUILD SOURCES: ${SRCS}")
+
+add_executable(${SUBPROJECT_NAME} ${SRCS})
+target_link_libraries(${SUBPROJECT_NAME} ${COMMON_LIBS})
+
+message(STATUS "===========================")
+message(STATUS "TARGETS ${TARGETS}")
+message(STATUS "INSTALL_NAME_DIR ${INSTALL_NAME_DIR}")
+message(STATUS "SUBPROJECT_NAME ${SUBPROJECT_NAME}")
+
+install(TARGETS ${SUBPROJECT_NAME} DESTINATION ${INSTALL_NAME_DIR}/${SUBPROJECT_NAME})
